@@ -1,0 +1,22 @@
+#container > div 
+{
+    /* moves the boxes horizontal instead of vertical by changing them from block elements to inline */ 
+    /* display: inline; */
+
+    /* Refelects boxes on the x axis left or right */
+    /* float: left; */    
+}
+
+#container 
+{
+    /* Make this container a Flex container */ 
+    display: flex;
+
+    /* Can now adjust the direction of the container */
+    flex-direction: row-reverse; 
+    /* justify-content: flex-start; */
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+}

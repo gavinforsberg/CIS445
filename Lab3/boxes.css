@@ -1,0 +1,25 @@
+#outer-box {
+    padding: 50px;
+    background-color: teal;
+    width: 300px;
+    height: 300px;
+}
+
+#inner-box {
+    border: 50px solid pink;
+
+    /* above line is equivelent to 
+    border-style: solid;
+    border-width: 50px;
+    border-color: pink; 
+    */
+
+    background-color: salmon;
+    width: 200px;
+    height: 200px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

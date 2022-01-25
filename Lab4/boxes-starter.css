@@ -1,0 +1,53 @@
+/*
+ * Source: CSE 154, U. Washington
+ * URL: https://courses.cs.washington.edu/courses/cse154/20sp/lectures/lec04-css-flex/index.html
+ */
+
+/* In practice, it's best to define your CSS rule sets in order of general to specific
+ * (tags being most general, working outside in the DOM [body is usually most general],
+ * id's being most specific) */
+ div {
+    border: 2pt solid black;
+  }
+  
+  /*
+   * Check your understanding: Why doesn't it make sense to ever have a context selector for an id, such as:
+   *   body #container { ... }
+   * ?
+   */
+  #container {
+    width: 50%;
+    background-color: gray;
+    font-size: 20pt;
+  }
+  
+  #container > div 
+  {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /*
+   * Remember that for a set of elements matched in CSS, the "first" has position 1, not 0.
+   * Thus the first element is odd and you see the first box matching
+   *  #boxes-container > div
+   * turn darkgreen.
+   */
+  #container > div:nth-child(odd) {
+    background-color:blue;
+  }
+  
+  /* We _could_ also set all box background colors to white in the same with the ruleset
+   * that defines width/height, but's best to avoid overriding styles which we would then
+   * be doing when changing background-color to darkgreen in the above ruleset */
+  #container > div:nth-child(even) {
+    background-color: white;
+  }
+  
+  #container {
+    border-radius: 5px; /* shorthand for all sides */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  

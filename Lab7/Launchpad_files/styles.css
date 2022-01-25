@@ -1,0 +1,119 @@
+html {
+    font-family: monospace;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+body, main, section, div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    flex-basis: 100%;
+}
+
+main img {
+    max-height: 40vh;
+    /* not a very good way to do this because it hides all the images */ 
+    /* display: none; */ 
+}
+
+section {
+    justify-content: space-evenly;
+    flex-basis: 100%;
+}
+
+button {
+    height: 10vh;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+footer {
+    flex-basis: 10%;
+    font-size: 18px;
+}
+
+/* -- lights.html example -- */
+#base {
+    height: 10vh;
+    width: 5vw;
+    background-color: silver;
+}
+
+#bulb {
+    height: 30vh;
+    width: 30vh;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#bulb > div {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    /* hides the element, but it still takes up space in the layout */
+    visibility: hidden;
+}
+
+/* -- launchpad.html example -- */
+
+#launch {
+    border-radius: 50%;
+    background-color: red;
+    font-size: 24px;
+    font-weight: bold;
+    height: 100px;
+    width: 100px;
+}
+
+/* from https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+.takeoff {
+  animation: shake 0.32s cubic-bezier(.36,.07,.19,.97) both 5;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+div > div {
+    transition: transform 5s ease 2s; 
+}
+
+.takeoff > div {
+  transform: translateY(-10000px);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
